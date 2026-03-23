@@ -1,0 +1,20 @@
+# Image de base Python 3.11
+FROM python:3.11-slim
+
+# Dossier de travail dans le container
+WORKDIR /app
+
+# Copier le fichier des dépendances
+COPY requirements.txt .
+
+# Installer toutes les dépendances
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copier le code source
+COPY src/ ./src/
+
+# Port pour Jupyter Notebook
+EXPOSE 8888
+
+# Lancer Jupyter au démarrage
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]

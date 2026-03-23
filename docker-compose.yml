@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  # Service principal : environnement ML/DL
+  ml-env:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: ml-dev-environment
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+
+  # Service SonarQube : analyse qualité du code
+  sonarqube:
+    image: sonarqube:community
+    container_name: sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
