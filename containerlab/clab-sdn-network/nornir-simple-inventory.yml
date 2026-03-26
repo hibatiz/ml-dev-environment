@@ -1,0 +1,16 @@
+---
+router1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.4
+router2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.3
+switch1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.20.20.2

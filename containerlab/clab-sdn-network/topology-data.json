@@ -1,0 +1,148 @@
+{
+  "name": "sdn-network",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-30ee4b90f943",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDeQNWgxWNcNT/h7NApkSPC2/ghLnMM4ZUFSaO6s7aAREWWsJJzE69o1gR5OgjHKiqqTc9XrxZ0txCYq2zhD2H+Hnm00M2MZEPJUt9DqW608+KFvq84lQr+r22tvFdhWLQkB5a1Yrm36WP+bsKxZNpDyXs3N5qP2oFUEYjuIGX/0tmiFL2EY5r9B2CLHGU0lG+DU1GPia/1jwrhBYOwTyIDh3qp0kdEKgMfTbU8bm965O+K1MhkY793d2IxcYaoXIEB4yXcCwpHJLqLYS2VpMZcEWdQFccXKFO3SCY21FkBFK9hJpydiynwx8tY36nHuCPNeyzWL5WVAFw4rVhcT78EIAtIllC68OAa+CIHrF07jIGAStAxVoZoZzwOY0atfkXXxmYeem6FenfVB7S/V05sNCA/CG9k++wwIDrgYFLkmGjvuGiimPlCM3/xNASjy7WoP8NN1tnxPAjhCYnnlsDLAEYQh4k2aI1i5Hp5I8TpQtg5b1JIq6aI1OQVO6ie1eKaJ5hyjNoKZaScjMyFIsltR5sAxCjRyVcchTUInAMfeM4JSHVU4+pgyAGKuTr89MW1tsTi4v9d5HfrtvVoy/iGKz/0KsJGVdFYrSIVI47yQF81OM+7Fp/4cGhwdh15VJMsObBiu0uDsDUDxtlsSzg4Y1Ezdp2hB7IbUEC7O8QtHw=="],
+  "nodes": {
+    "router1": {
+      "index": "0",
+      "shortname": "router1",
+      "longname": "clab-sdn-network-router1",
+      "fqdn": "router1.sdn-network.io",
+      "group": "",
+      "labdir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/router1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-30ee4b90f943",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/router1",
+        "clab-node-longname": "clab-sdn-network-router1",
+        "clab-node-name": "router1",
+        "clab-node-type": "",
+        "clab-owner": "hiba",
+        "clab-topo-file": "/home/hiba/ml-dev-environment/containerlab/topology.yml",
+        "containerlab": "sdn-network"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router2": {
+      "index": "1",
+      "shortname": "router2",
+      "longname": "clab-sdn-network-router2",
+      "fqdn": "router2.sdn-network.io",
+      "group": "",
+      "labdir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/router2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-30ee4b90f943",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/router2",
+        "clab-node-longname": "clab-sdn-network-router2",
+        "clab-node-name": "router2",
+        "clab-node-type": "",
+        "clab-owner": "hiba",
+        "clab-topo-file": "/home/hiba/ml-dev-environment/containerlab/topology.yml",
+        "containerlab": "sdn-network"
+      },
+      "port-bindings": [
+      ]
+    },
+    "switch1": {
+      "index": "2",
+      "shortname": "switch1",
+      "longname": "clab-sdn-network-switch1",
+      "fqdn": "switch1.sdn-network.io",
+      "group": "",
+      "labdir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/switch1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-30ee4b90f943",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/hiba/ml-dev-environment/containerlab/clab-sdn-network/switch1",
+        "clab-node-longname": "clab-sdn-network-switch1",
+        "clab-node-name": "switch1",
+        "clab-node-type": "",
+        "clab-owner": "hiba",
+        "clab-topo-file": "/home/hiba/ml-dev-environment/containerlab/topology.yml",
+        "containerlab": "sdn-network"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "router1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:90:18:67",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:1b:50:b7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "router2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e6:a1:66",
+          "peer": "z"
+        },
+        "z": {
+          "node": "switch1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:5c:6f:77",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}
