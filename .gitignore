@@ -1,0 +1,14 @@
+﻿# Environnement virtuel Python
+.venv/
+
+# Fichiers Python compilés
+__pycache__/
+*.pyc
+*.pyo
+
+# Docker
+docker/requirements-docker.txt
+
+# Fichiers système
+.DS_Store
+Thumbs.db
